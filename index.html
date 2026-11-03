@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="翻訳スキルを最新にする手順と、とりこみ君の「セル内画像にする枚数」を0枚にする手順を、1画面1手順で説明します。">
+<title>翻訳スキルの更新と、とりこみ君の画像設定</title>
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#FAF9F6; --surface:#FFFFFF; --ink:#22272E; --ink-2:#5A6472;
+  --line:#E3E1DA; --accent:#2C55A6; --accent-soft:#EBF0FA; --on-accent:#fff;
+  --kraft:#8A6A3B; --kraft-soft:#F5EFE3;
+  --ok:#2E7D4F; --ok-soft:#E8F3EC;
+  --warn:#9A6A0A; --warn-soft:#FBF3DF;
+  --unknown-soft:#EEEFF1;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#171A1F; --surface:#1F242B; --ink:#E8EAED; --ink-2:#9AA4B0;
+    --line:#343B44; --accent:#7FA3E8; --accent-soft:#243248; --on-accent:#10151C;
+    --kraft:#C9A76A; --kraft-soft:#2E2820;
+    --ok:#7CC49A; --ok-soft:#20312A;
+    --warn:#D9B36A; --warn-soft:#332C1D;
+    --unknown-soft:#2A2E34;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP",sans-serif;
+  font-size:18px;line-height:1.8;overflow-wrap:anywhere}
+main{max-width:40rem;margin:0 auto;padding:1.5rem 16px 3rem}
+h1{font-size:1.5rem;line-height:1.5;margin:0 0 .4rem}
+h2{font-size:1.3rem;line-height:1.5;margin:0 0 .6rem}
+.part{font-size:1.25rem;font-weight:700;margin:2.2rem 0 .8rem;padding:.5rem .9rem;border-left:8px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0}
+p{margin:.6rem 0}
+.sub{color:var(--ink-2);margin:0}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1rem;margin:1rem 0}
+.num{display:inline-flex;align-items:center;justify-content:center;width:3.2rem;height:3.2rem;border-radius:50%;background:var(--accent);color:var(--on-accent);font-size:1.8rem;font-weight:700;line-height:1;margin-bottom:.5rem}
+.card{border-radius:12px;padding:.9rem 1rem;margin:.75rem 0;border:1px solid var(--line);background:var(--surface)}
+.card.info{background:var(--accent-soft);border-color:var(--accent)}
+.card.ok{background:var(--ok-soft);border-color:var(--ok)}
+.card.warn{background:var(--warn-soft);border-color:var(--warn)}
+.card.kraft{background:var(--kraft-soft);border-color:var(--kraft)}
+.card p:first-child{margin-top:0}.card p:last-child{margin-bottom:0}
+.label{display:inline-block;font-size:.85rem;font-weight:700;border-radius:6px;padding:.05rem .6rem;border:1px solid currentColor}
+.card.ok .label{color:var(--ok)}.card.kraft .label{color:var(--kraft)}
+.menu{display:block;font-weight:700;background:var(--unknown-soft);border:1px solid var(--line);border-radius:8px;padding:.4rem .7rem;margin:.4rem 0}
+img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin:.8rem auto 0}
+.copybox{font-size:1rem;background:var(--unknown-soft);border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem;margin:.5rem 0;line-height:1.7}
+button{font:inherit;font-weight:700;min-height:52px;width:100%;border-radius:14px;border:2px solid var(--accent);background:var(--accent);color:var(--on-accent);padding:.6rem 1rem;cursor:pointer;margin:.3rem 0}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+.msg{min-height:1.4em;font-size:.95rem;color:var(--ok);margin:.1rem 0}
+.msg.fail{color:var(--warn)}
+ul{padding-left:1.2em;margin:.4rem 0}
+li{margin:.3rem 0}
+footer{margin-top:2rem;color:var(--ink-2);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>翻訳スキルの更新と、とりこみ君の画像設定</h1>
+  <p class="sub">1画面に1つずつ、順番にやれば大丈夫です。</p>
+</header>
+
+<div class="card info">
+  <p><b>やることは2つです。</b></p>
+  <p>① 翻訳スキルを最新にする<br>② とりこみ君の「セル内画像にする枚数」を0枚にする</p>
+</div>
+
+<div class="part">① 翻訳スキルを最新にする</div>
+
+<section class="step">
+  <span class="num">1</span>
+  <h2>シートのメニューを開く</h2>
+  <p>いつも使っているシートを開きます。</p>
+  <p>上のメニューから、次の順にえらびます。</p>
+  <span class="menu">🌐 eBay 翻訳 (AI)</span>
+  <p style="text-align:center;margin:.2rem 0">↓</p>
+  <span class="menu">📄 スキル本文をダウンロード (Codex/Claude/Gemini 登録用)</span>
+</section>
+
+<section class="step">
+  <span class="num">2</span>
+  <h2>ファイルをダウンロードする</h2>
+  <p>「eBay Translation Skill 本文」という画面が開きます。</p>
+  <p>赤い枠の青いボタンをおします。</p>
+  <span class="menu">📥 ファイルとしてダウンロード (ebay-translation-skill.md)</span>
+  <p>パソコンの「ダウンロード」フォルダなどに、ファイルが保存されます。</p>
+  <img src="images/step2-dialog.png" alt="eBay Translation Skill 本文の画面。赤い枠で囲んだ青いダウンロードボタンがあります。" width="1100" height="1087">
+</section>
+
+<section class="step">
+  <span class="num">3</span>
+  <h2>AIにファイルを渡す</h2>
+  <p>いつも翻訳に使っているAI（Codex、Claude、Gemini など）に、ダウンロードしたファイルを渡します。</p>
+  <p><b>どちらかを選んでください。</b></p>
+
+  <div class="card ok">
+    <span class="label">ほとんどの方はこちら</span>
+    <p><b>スキルを自分で書き換えていない人</b></p>
+    <p>ファイルを渡して、次のように伝えます。</p>
+    <div class="copybox" id="t1">今の ebay-translation スキルを、このファイルの内容に丸ごと置き換えてください。要約や一部だけの書き換えはしないでください。</div>
+    <button type="button" data-copy="t1">この文をコピーする</button>
+    <div class="msg" id="m-t1" aria-live="polite"></div>
+  </div>
+
+  <div class="card kraft">
+    <span class="label">自分で書き換えた部分がある方</span>
+    <p><b>スキルを自分で書き換えている人</b></p>
+    <p>ファイルを渡して、次のように伝えます。</p>
+    <div class="copybox" id="t2">このファイルとの差分を、今の ebay-translation スキルに追加してください。私が自分で書き換えた部分は消さずに、うまく合うように調整してください。</div>
+    <button type="button" data-copy="t2">この文をコピーする</button>
+    <div class="msg" id="m-t2" aria-live="polite"></div>
+    <div class="card warn"><p>自分で書き換えた部分がある場合は、調整もAIに任せてください。</p></div>
+  </div>
+</section>
+
+<section class="step">
+  <span class="num">4</span>
+  <h2>更新できたか確かめる</h2>
+  <p>AIに、次のように聞きます。</p>
+  <div class="copybox" id="t3">スキルを更新しましたか？変わった点を短く教えてください</div>
+  <button type="button" data-copy="t3">この文をコピーする</button>
+  <div class="msg" id="m-t3" aria-live="polite"></div>
+  <div class="card ok"><p>「更新しました」と答えれば、できあがりです。</p></div>
+</section>
+
+<div class="card info">
+  <p><b>ほかのスキルを使っている方へ</b></p>
+  <p>モータース用・最終チェック・再出品のスキルを使っている方は、同じ画面のそれぞれのボタンからファイルをダウンロードし、AIには「ebay-translation」のところを、そのスキルの名前に変えて伝えてください。</p>
+  <ul>
+    <li>最終チェック：📥 ダウンロード (final-check-skill.md)</li>
+    <li>再出品取り込み：📥 ダウンロード (relisting-import-skill.md)</li>
+    <li>再出品翻訳：📥 ダウンロード (relisting-translation-skill.md)</li>
+    <li>モータース翻訳：📥 ダウンロード (ebay-motors-translation-skill.md)</li>
+  </ul>
+</div>
+
+<div class="part">② とりこみ君の「セル内画像にする枚数」を0枚にする</div>
+
+<section class="step">
+  <span class="num">1</span>
+  <h2>とりこみ君の設定画面を開く</h2>
+  <p>Chromeの右上にある、とりこみ君のアイコンをおします。</p>
+  <p>出てきた画面の、次のボタンをおします。</p>
+  <span class="menu">⚙️ 設定を開く</span>
+  <div class="card warn"><p>アイコンが見えないときは、右上のパズルのマーク（拡張機能）をおして、「とりこみ君」をえらびます。</p></div>
+</section>
+
+<section class="step">
+  <span class="num">2</span>
+  <h2>「0枚」をえらぶ</h2>
+  <p>設定画面を下へ動かして、「画像出力設定」を探します。</p>
+  <p>「セル内画像にする枚数（メルカリ非経由）」の欄を、次のものに変えます。</p>
+  <span class="menu">0枚（セル内画像にしない・URLのまま）</span>
+  <img src="images/step-torikomi-0.png" alt="画像出力設定の画面。セル内画像にする枚数の欄が、赤い枠で囲まれ、0枚になっています。" width="1400" height="518">
+</section>
+
+<section class="step">
+  <span class="num">3</span>
+  <h2>確認の表示が出たらOKをおす</h2>
+  <p>0枚をえらぶと、確認の表示が出ます。次のような文です。</p>
+  <div class="copybox">0枚にすると、セル内画像は作られず全画像がメルカリ等のURL（=IMAGE式）のままになります。…</div>
+  <p>そのまま「OK」をおして大丈夫です。</p>
+</section>
+
+<section class="step">
+  <span class="num">4</span>
+  <h2>設定を保存する</h2>
+  <p>画面の下にある、次のボタンをおします。</p>
+  <span class="menu">設定を保存</span>
+  <p>「設定を保存しました」と出れば、できあがりです。</p>
+</section>
+
+<footer>おわり</footer>
+</main>
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var id=b.getAttribute('data-copy');
+    var src=document.getElementById(id);
+    var out=document.getElementById('m-'+id);
+    var text=src.textContent.trim();
+    function ok(){out.className='msg';out.textContent='コピーしました';}
+    function fallback(){
+      try{
+        var ta=document.createElement('textarea');
+        ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+        document.body.appendChild(ta);ta.select();
+        var r=document.execCommand('copy');
+        document.body.removeChild(ta);
+        if(r){ok();return;}
+      }catch(e){}
+      try{
+        var s=window.getSelection(),rg=document.createRange();
+        rg.selectNodeContents(src);s.removeAllRanges();s.addRange(rg);
+      }catch(e){}
+      out.className='msg fail';
+      out.textContent='自動でコピーできませんでした。選ばれた文字を長くおして、コピーしてください。';
+    }
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(ok,fallback);
+      }else{fallback();}
+    }catch(e){fallback();}
+  });
+});
+</script>
+</body>
+</html>
